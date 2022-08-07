@@ -1,7 +1,7 @@
 # Geometry Nodes
 - brushtail
   - Blender 3.1.2 で作成した、ふさふさのしっぽ。Sketchfab（以下のURL）で3Dモデルを公開している。
-  - https://sketchfab.com/3d-models/brushtail-77cb8f8f9556482a8000021f187ceb9a
+    - https://sketchfab.com/3d-models/brushtail-77cb8f8f9556482a8000021f187ceb9a
 
 # Python
 - renameBones
