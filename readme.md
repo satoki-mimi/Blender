@@ -5,9 +5,10 @@
 
 # Python
 - renameBones
-  - ボーンの名前を変更する。普段は、VRoidモデル（VRM） -> UnityのHumanoid -> MMDモデル（PMX）の順にリネームしている。
-    - renameBones_unityHumanoid2pmx.py
-    - renameBones_vrm2pmx.py
-    - renameBones_vrm2unityHumanoid.py
+  - renameBones_unityHumanoid2pmx.py
+  - renameBones_vrm2pmx.py
+  - renameBones_vrm2unityHumanoid.py
+    - 3Dモデルの規格に合わせてボーンの名前を変更する。
+    - 普段は、VRoidモデル（VRM） -> UnityのHumanoid -> MMDモデル（PMX）の順にリネームしている。
 - renderImagesForeachShapeKey.py
   - シェイプキーごとに画像をレンダリングする。表情の一覧を得るために作成した。
