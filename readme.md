@@ -9,3 +9,5 @@
     - renameBones_unityHumanoid2pmx.py
     - renameBones_vrm2pmx.py
     - renameBones_vrm2unityHumanoid.py
+- renderImagesForeachShapeKey.py
+  - シェイプキーごとに画像をレンダリングする。表情の一覧を得るために作成した。
