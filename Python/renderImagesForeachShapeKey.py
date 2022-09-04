@@ -12,4 +12,5 @@ for i in range(len(keys)):
     keys[i].value = 1
     bpy.ops.render.render()
     bpy.data.images['Render Result'].save_render(filepath = filename)
+    
 keys[len(keys)].value = 0
