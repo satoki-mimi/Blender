@@ -4,6 +4,8 @@
     - https://sketchfab.com/3d-models/brushtail-77cb8f8f9556482a8000021f187ceb9a
 
 # Python
+- overlayBones
+  - 名前が同じボーンの位置を合わせる。
 - renameBones
   - renameBones_unityHumanoid2pmx
   - renameBones_vrm2pmx
