@@ -1,6 +1,6 @@
 import bpy
 
-def add_shape_keys():
+def add_empty_shape_keys():
     
     keys = [
         "Basis",
@@ -43,4 +43,4 @@ def add_shape_keys():
     for key in keys:
         bpy.context.active_object.shape_key_add(name=key)
     
-add_shape_keys()
+add_empty_shape_keys()
