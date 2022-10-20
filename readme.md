@@ -6,6 +6,8 @@
 # Python
 - addEmptyShapeKeys
   - VRChatとVRMで利用する空のshape keyを作成する。
+- assignWeight_to_OverlappingVertices
+  - ボーンのTailと同じ座標にある頂点に、ボーンのウェイトを割り当てる
 - makeVRChatShapeKeysFromAIUEO
   - 「あいうえお」のshape keyをミックスして、VRChatで利用するshape keyを作成する。
 - overlayBones
