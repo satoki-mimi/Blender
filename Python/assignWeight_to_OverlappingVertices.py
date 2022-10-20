@@ -12,7 +12,7 @@ def assignWeight_to_OverlappingVertices():
     
     for vert in obj.data.vertices:
         for boneName in boneNames:
-            tail_co = arm.data.bones[boneName].tail
+            tail_co = arm.data.bones[boneName].tail_local
             length = (vert.co - tail_co).length
             if length < 0.001:
                 vertGroup = obj.vertex_groups[boneName]
