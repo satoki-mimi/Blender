@@ -1,6 +1,6 @@
 import bpy
 
-def assignWeight_to_OverlappingVertices():
+def assignWeights_to_OverlappingVertices():
     
     if bpy.context.mode != 'OBJECT':
         bpy.ops.object.mode_set(mode='OBJECT')
@@ -22,4 +22,4 @@ def assignWeight_to_OverlappingVertices():
                 vertGroup = obj.vertex_groups[boneName]
                 vertGroup.add([vert.index], 1.0, 'REPLACE')
 
-assignWeight_to_OverlappingVertices()
+assignWeights_to_OverlappingVertices()
