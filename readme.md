@@ -1,3 +1,7 @@
+# Addon
+- symmetrize_two_vertices.py
+  - 選択した２つの頂点に関して、x座標が正の方の頂点が、x座標が負の方の頂点と鏡合わせになるように移動させる。
+
 # Geometry Nodes
 - brushtail
   - Blender 3.1.2 で作成した、ふさふさのしっぽ。Sketchfab（以下のURL）で3Dモデルを公開している。
@@ -20,7 +24,3 @@
     - 普段は、VRoidモデル（VRM） -> UnityのHumanoid -> MMDモデル（PMX）の順にリネームしている。
 - render_images_foreach_shape_key
   - シェイプキーごとに画像をレンダリングする。表情の一覧を得るために作成した。
-  
-# Addon
-- symmetrize_two_vertices.py
-  - 選択した２つの頂点に関して、x座標が正の方の頂点が、x座標が負の方の頂点と鏡合わせになるように移動させる。
