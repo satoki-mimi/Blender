@@ -40,14 +40,11 @@ def make_vrchat_shape_keys_from_aiueo():
     
     for vrc_key in vrc_keys.keys():
         bpy.ops.object.shape_key_clear()
-
         aiueo_keys = vrc_keys[vrc_key]
-
         for aiueo_key in aiueo_keys.keys():
             key_dic[aiueo_key].value = aiueo_keys[aiueo_key]
-
         bpy.context.active_object.shape_key_add(name=vrc_key,from_mix=True)
-    
+
     bpy.ops.object.shape_key_clear()
     
 make_vrchat_shape_keys_from_aiueo()
