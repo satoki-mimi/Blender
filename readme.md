@@ -4,19 +4,19 @@
     - https://sketchfab.com/3d-models/brushtail-77cb8f8f9556482a8000021f187ceb9a
 
 # Python
-- addEmptyShapeKeys
+- add_empty_shape_keys
   - VRChatとVRMで利用する空のshape keyを作成する。
-- assignWeight_to_OverlappingVertices
+- assign_weight_to_overlapping_vertices
   - ボーンのTailと同じ座標にある頂点に、ボーンのウェイトを割り当てる
-- makeVRChatShapeKeysFromAIUEO
+- make_vrchat_shape_keys_from_aiueo
   - 「あいうえお」のshape keyをミックスして、VRChatで利用するshape keyを作成する。
-- overlayBones
+- overlay_bones
   - 名前が同じボーンの位置を合わせる。
-- renameBones
-  - renameBones_unityHumanoid2pmx
-  - renameBones_vrm2pmx
-  - renameBones_vrm2unityHumanoid
+- rename_bones
+  - rename_bones_unity_humanoid_to_pmx
+  - rename_bones_vrm_to_pmx
+  - rename_bones_vrm_to_unity_humanoid
     - 3Dモデルの規格に合わせてボーンの名前を変更する。
     - 普段は、VRoidモデル（VRM） -> UnityのHumanoid -> MMDモデル（PMX）の順にリネームしている。
-- renderImagesForeachShapeKey
+- render_images_foreach_shape_key
   - シェイプキーごとに画像をレンダリングする。表情の一覧を得るために作成した。
