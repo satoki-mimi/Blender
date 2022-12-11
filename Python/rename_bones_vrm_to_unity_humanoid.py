@@ -1,66 +1,68 @@
 import bpy
 
 def rename_bones():
-  for bone in bpy.context.active_object.data.bones:
-    if bone.name == 'Root': bone.name = 'Root' #基本のボーンにはない
-    elif bone.name == 'J_Bip_C_Hips': bone.name = 'Hips'
-    elif bone.name == 'J_Bip_C_Spine': bone.name = 'Spine'
-    elif bone.name == 'J_Bip_C_Chest': bone.name = 'Chest'
-    elif bone.name == 'J_Bip_C_UpperChest': bone.name = 'Upper_Chest'
-    elif bone.name == 'J_Sec_L_Bust1': bone.name = 'Bust.L'
-    elif bone.name == 'J_Sec_R_Bust1': bone.name = 'Bust.R'
-    elif bone.name == 'J_Sec_L_Bust2': bone.name = 'Bust2.L' #基本のボーンにはない
-    elif bone.name == 'J_Sec_R_Bust2': bone.name = 'Bust2.R' #基本のボーンにはない
-    elif bone.name == 'J_Bip_C_Neck': bone.name = 'Neck'
-    elif bone.name == 'J_Bip_C_Head': bone.name = 'Head'
-    elif bone.name == 'J_Adj_L_FaceEye': bone.name = 'Eye.L'
-    elif bone.name == 'J_Adj_R_FaceEye': bone.name = 'Eye.R'
-    elif bone.name == 'J_Bip_L_Shoulder': bone.name = 'Shoulder.L'
-    elif bone.name == 'J_Bip_L_UpperArm': bone.name = 'Upper_Arm.L'
-    elif bone.name == 'J_Bip_L_LowerArm': bone.name = 'Lower_Arm.L'
-    elif bone.name == 'J_Bip_L_Hand': bone.name = 'Hand.L'
-    elif bone.name == 'J_Bip_L_Thumb1': bone.name = 'Thumb_Proximal.L'
-    elif bone.name == 'J_Bip_L_Thumb2': bone.name = 'Thumb_Intermediate.L'
-    elif bone.name == 'J_Bip_L_Thumb3': bone.name = 'Thumb_Distal.L'
-    elif bone.name == 'J_Bip_L_Index1': bone.name = 'Index_Proximal.L'
-    elif bone.name == 'J_Bip_L_Index2': bone.name = 'Index_Intermediate.L'
-    elif bone.name == 'J_Bip_L_Index3': bone.name = 'Index_Distal.L'
-    elif bone.name == 'J_Bip_L_Middle1': bone.name = 'Middle_Proximal.L'
-    elif bone.name == 'J_Bip_L_Middle2': bone.name = 'Middle_Intermediate.L'
-    elif bone.name == 'J_Bip_L_Middle3': bone.name = 'Middle_Distal.L'
-    elif bone.name == 'J_Bip_L_Ring1': bone.name = 'Ring_Proximal.L'
-    elif bone.name == 'J_Bip_L_Ring2': bone.name = 'Ring_Intermediate.L'
-    elif bone.name == 'J_Bip_L_Ring3': bone.name = 'Ring_Distal.L'
-    elif bone.name == 'J_Bip_L_Little1': bone.name = 'Little_Proximal.L'
-    elif bone.name == 'J_Bip_L_Little2': bone.name = 'Little_Intermediate.L'
-    elif bone.name == 'J_Bip_L_Little3': bone.name = 'Little_Distal.L'
-    elif bone.name == 'J_Bip_R_Shoulder': bone.name = 'Shoulder.R'
-    elif bone.name == 'J_Bip_R_UpperArm': bone.name = 'Upper_Arm.R'
-    elif bone.name == 'J_Bip_R_LowerArm': bone.name = 'Lower_Arm.R'
-    elif bone.name == 'J_Bip_R_Hand': bone.name = 'Hand.R'
-    elif bone.name == 'J_Bip_R_Thumb1': bone.name = 'Thumb_Proximal.R'
-    elif bone.name == 'J_Bip_R_Thumb2': bone.name = 'Thumb_Intermediate.R'
-    elif bone.name == 'J_Bip_R_Thumb3': bone.name = 'Thumb_Distal.R'
-    elif bone.name == 'J_Bip_R_Index1': bone.name = 'Index_Proximal.R'
-    elif bone.name == 'J_Bip_R_Index2': bone.name = 'Index_Intermediate.R'
-    elif bone.name == 'J_Bip_R_Index3': bone.name = 'Index_Distal.R'
-    elif bone.name == 'J_Bip_R_Middle1': bone.name = 'Middle_Proximal.R'
-    elif bone.name == 'J_Bip_R_Middle2': bone.name = 'Middle_Intermediate.R'
-    elif bone.name == 'J_Bip_R_Middle3': bone.name = 'Middle_Distal.R'
-    elif bone.name == 'J_Bip_R_Ring1': bone.name = 'Ring_Proximal.R'
-    elif bone.name == 'J_Bip_R_Ring2': bone.name = 'Ring_Intermediate.R'
-    elif bone.name == 'J_Bip_R_Ring3': bone.name = 'Ring_Distal.R'
-    elif bone.name == 'J_Bip_R_Little1': bone.name = 'Little_Proximal.R'
-    elif bone.name == 'J_Bip_R_Little2': bone.name = 'Little_Intermediate.R'
-    elif bone.name == 'J_Bip_R_Little3': bone.name = 'Little_Distal.R'
-    elif bone.name == 'J_Bip_L_UpperLeg': bone.name = 'Upper_Leg.L'
-    elif bone.name == 'J_Bip_L_LowerLeg': bone.name = 'Lower_Leg.L'
-    elif bone.name == 'J_Bip_L_Foot': bone.name = 'Foot.L'
-    elif bone.name == 'J_Bip_L_ToeBase': bone.name = 'Toes.L'
-    elif bone.name == 'J_Bip_R_UpperLeg': bone.name = 'Upper_Leg.R'
-    elif bone.name == 'J_Bip_R_LowerLeg': bone.name = 'Lower_Leg.R'
-    elif bone.name == 'J_Bip_R_Foot': bone.name = 'Foot.R'
-    elif bone.name == 'J_Bip_R_ToeBase': bone.name = 'Toes.R'
-  return
-
+    dic = {
+        'Root': 'Root' #基本のボーンにはない
+        'J_Bip_C_Hips': 'Hips',
+        'J_Bip_C_Spine': 'Spine',
+        'J_Bip_C_Chest': 'Chest',
+        'J_Bip_C_UpperChest': 'Upper_Chest',
+        'J_Sec_L_Bust1': 'Bust.L',
+        'J_Sec_R_Bust1': 'Bust.R',
+        'J_Sec_L_Bust2': 'Bust2.L', #基本のボーンにはない
+        'J_Sec_R_Bust2': 'Bust2.R', #基本のボーンにはない
+        'J_Bip_C_Neck': 'Neck',
+        'J_Bip_C_Head': 'Head',
+        'J_Adj_L_FaceEye': 'Eye.L',
+        'J_Adj_R_FaceEye': 'Eye.R',
+        'J_Bip_L_Shoulder': 'Shoulder.L',
+        'J_Bip_L_UpperArm': 'Upper_Arm.L',
+        'J_Bip_L_LowerArm': 'Lower_Arm.L',
+        'J_Bip_L_Hand': 'Hand.L',
+        'J_Bip_L_Thumb1': 'Thumb_Proximal.L',
+        'J_Bip_L_Thumb2': 'Thumb_Intermediate.L',
+        'J_Bip_L_Thumb3': 'Thumb_Distal.L',
+        'J_Bip_L_Index1': 'Index_Proximal.L',
+        'J_Bip_L_Index2': 'Index_Intermediate.L',
+        'J_Bip_L_Index3': 'Index_Distal.L',
+        'J_Bip_L_Middle1': 'Middle_Proximal.L',
+        'J_Bip_L_Middle2': 'Middle_Intermediate.L',
+        'J_Bip_L_Middle3': 'Middle_Distal.L',
+        'J_Bip_L_Ring1': 'Ring_Proximal.L',
+        'J_Bip_L_Ring2': 'Ring_Intermediate.L',
+        'J_Bip_L_Ring3': 'Ring_Distal.L',
+        'J_Bip_L_Little1': 'Little_Proximal.L',
+        'J_Bip_L_Little2': 'Little_Intermediate.L',
+        'J_Bip_L_Little3': 'Little_Distal.L',
+        'J_Bip_R_Shoulder': 'Shoulder.R',
+        'J_Bip_R_UpperArm': 'Upper_Arm.R',
+        'J_Bip_R_LowerArm': 'Lower_Arm.R',
+        'J_Bip_R_Hand': 'Hand.R',
+        'J_Bip_R_Thumb1': 'Thumb_Proximal.R',
+        'J_Bip_R_Thumb2': 'Thumb_Intermediate.R',
+        'J_Bip_R_Thumb3': 'Thumb_Distal.R',
+        'J_Bip_R_Index1': 'Index_Proximal.R',
+        'J_Bip_R_Index2': 'Index_Intermediate.R',
+        'J_Bip_R_Index3': 'Index_Distal.R',
+        'J_Bip_R_Middle1': 'Middle_Proximal.R',
+        'J_Bip_R_Middle2': 'Middle_Intermediate.R',
+        'J_Bip_R_Middle3': 'Middle_Distal.R',
+        'J_Bip_R_Ring1': 'Ring_Proximal.R',
+        'J_Bip_R_Ring2': 'Ring_Intermediate.R',
+        'J_Bip_R_Ring3': 'Ring_Distal.R',
+        'J_Bip_R_Little1': 'Little_Proximal.R',
+        'J_Bip_R_Little2': 'Little_Intermediate.R',
+        'J_Bip_R_Little3': 'Little_Distal.R',
+        'J_Bip_L_UpperLeg': 'Upper_Leg.L',
+        'J_Bip_L_LowerLeg': 'Lower_Leg.L',
+        'J_Bip_L_Foot': 'Foot.L',
+        'J_Bip_L_ToeBase': 'Toes.L',
+        'J_Bip_R_UpperLeg': 'Upper_Leg.R',
+        'J_Bip_R_LowerLeg': 'Lower_Leg.R',
+        'J_Bip_R_Foot': 'Foot.R',
+        'J_Bip_R_ToeBase': 'Toes.R'
+    }
+    for bone in bpy.context.active_object.data.bones:
+        if bone.name in dic:
+            bone.name = dic[bone.name]
 rename_bones()
