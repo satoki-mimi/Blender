@@ -1,67 +1,69 @@
 import bpy
 
 def rename_bones():
-  for bone in bpy.context.active_object.data.bones:
-    if bone.name == 'Root': bone.name = 'グルーブ'
-    elif bone.name == 'Hips': bone.name = '下半身'
-    elif bone.name == 'Spine': bone.name = '上半身'
-    elif bone.name == 'Chest': bone.name = '上半身1' #後ほどDissolve
-    elif bone.name == 'UpperChest': bone.name = '上半身2'
-    elif bone.name == 'Bust.L': bone.name = 'おっぱい.L'
-    elif bone.name == 'Bust.R': bone.name = 'おっぱい.R'
-    elif bone.name == 'Bust2.L': bone.name = 'おっぱい2.L' #基本のボーンにはない
-    elif bone.name == 'Bust2.R': bone.name = 'おっぱい2.R' #基本のボーンにはない
-    elif bone.name == 'Neck': bone.name = '首'
-    elif bone.name == 'Head': bone.name = '頭'
-    elif bone.name == 'Eye.L': bone.name = '目.L'
-    elif bone.name == 'Eye.R': bone.name = '目.R'
-    elif bone.name == 'Jaw': bone.name = '口.R' #若干異なる
-    elif bone.name == 'Shoulder.L': bone.name = '肩.L'
-    elif bone.name == 'Upper_Arm.L': bone.name = '腕.L'
-    elif bone.name == 'Lower_Arm.L': bone.name = 'ひじ.L'
-    elif bone.name == 'Hand.L': bone.name = '手首.L'
-    elif bone.name == 'Thumb_Proximal.L': bone.name = '親指０.L'
-    elif bone.name == 'Thumb_Intermediate.L': bone.name = '親指１.L'
-    elif bone.name == 'Thumb_Distal.L': bone.name = '親指２.L'
-    elif bone.name == 'Index_Proximal.L': bone.name = '人指１.L'
-    elif bone.name == 'Index_Intermediate.L': bone.name = '人指２.L'
-    elif bone.name == 'Index_Distal.L': bone.name = '人指３.L'
-    elif bone.name == 'Middle_Proximal.L': bone.name = '中指１.L'
-    elif bone.name == 'Middle_Intermediate.L': bone.name = '中指２.L'
-    elif bone.name == 'Middle_Distal.L': bone.name = '中指３.L'
-    elif bone.name == 'Ring_Proximal.L': bone.name = '薬指１.L'
-    elif bone.name == 'Ring_Intermediate.L': bone.name = '薬指２.L'
-    elif bone.name == 'Ring_Distal.L': bone.name = '薬指３.L'
-    elif bone.name == 'Little_Proximal.L': bone.name = '小指１.L'
-    elif bone.name == 'Little_Intermediate.L': bone.name = '小指２.L'
-    elif bone.name == 'Little_Distal.L': bone.name = '小指３.L'
-    elif bone.name == 'Shoulder.R' : bone.name = '肩.R'
-    elif bone.name == 'Upper_Arm.R' : bone.name = '腕.R'
-    elif bone.name == 'Lower_Arm.R' : bone.name = 'ひじ.R'
-    elif bone.name == 'Hand.R' : bone.name = '手首.R'
-    elif bone.name == 'Thumb_Proximal.R' : bone.name = '親指０.R'
-    elif bone.name == 'Thumb_Intermediate.R' : bone.name = '親指１.R'
-    elif bone.name == 'Thumb_Distal.R' : bone.name = '親指２.R'
-    elif bone.name == 'Index_Proximal.R' : bone.name = '人指１.R'
-    elif bone.name == 'Index_Intermediate.R' : bone.name = '人指２.R'
-    elif bone.name == 'Index_Distal.R' : bone.name = '人指３.R'
-    elif bone.name == 'Middle_Proximal.R' : bone.name = '中指１.R'
-    elif bone.name == 'Middle_Intermediate.R' : bone.name = '中指２.R'
-    elif bone.name == 'Middle_Distal.R' : bone.name = '中指３.R'
-    elif bone.name == 'Ring_Proximal.R' : bone.name = '薬指１.R'
-    elif bone.name == 'Ring_Intermediate.R' : bone.name = '薬指２.R'
-    elif bone.name == 'Ring_Distal.R' : bone.name = '薬指３.R'
-    elif bone.name == 'Little_Proximal.R' : bone.name = '小指１.R'
-    elif bone.name == 'Little_Intermediate.R' : bone.name = '小指２.R'
-    elif bone.name == 'Little_Distal.R' : bone.name = '小指３.R'
-    elif bone.name == 'Upper_Leg.L': bone.name = '足.L'
-    elif bone.name == 'Lower_Leg.L': bone.name = 'ひざ.L'
-    elif bone.name == 'Foot.L': bone.name = '足首.L'
-    elif bone.name == 'Toes.L': bone.name = 'つま先.L'
-    elif bone.name == 'Upper_Leg.R': bone.name = '足.R'
-    elif bone.name == 'Lower_Leg.R': bone.name = 'ひざ.R'
-    elif bone.name == 'Foot.R': bone.name = '足首.R'
-    elif bone.name == 'Toes.R': bone.name = 'つま先.R'
-  return
-
+    dic = {
+        'Root': 'グルーブ',
+        'Hips': '下半身',
+        'Spine': '上半身',
+        'Chest': '上半身1', #MMDの標準ボーンにはない
+        'UpperChest': '上半身2',
+        'Bust.L': 'おっぱい.L',
+        'Bust.R': 'おっぱい.R',
+        'Bust2.L': 'おっぱい2.L', #MMDの標準ボーンにはない
+        'Bust2.R': 'おっぱい2.R', #MMDの標準ボーンにはない
+        'Neck': '首',
+        'Head': '頭',
+        'Eye.L': '目.L',
+        'Eye.R': '目.R',
+        'Jaw': '口.R', #若干異なる
+        'Shoulder.L': '肩.L',
+        'Upper_Arm.L': '腕.L',
+        'Lower_Arm.L': 'ひじ.L',
+        'Hand.L': '手首.L',
+        'Thumb_Proximal.L': '親指０.L',
+        'Thumb_Intermediate.L': '親指１.L',
+        'Thumb_Distal.L': '親指２.L',
+        'Index_Proximal.L': '人指１.L',
+        'Index_Intermediate.L': '人指２.L',
+        'Index_Distal.L': '人指３.L',
+        'Middle_Proximal.L': '中指１.L',
+        'Middle_Intermediate.L': '中指２.L',
+        'Middle_Distal.L': '中指３.L',
+        'Ring_Proximal.L': '薬指１.L',
+        'Ring_Intermediate.L': '薬指２.L',
+        'Ring_Distal.L': '薬指３.L',
+        'Little_Proximal.L': '小指１.L',
+        'Little_Intermediate.L': '小指２.L',
+        'Little_Distal.L': '小指３.L',
+        'Shoulder.R' : '肩.R',
+        'Upper_Arm.R' : '腕.R',
+        'Lower_Arm.R' : 'ひじ.R',
+        'Hand.R' : '手首.R',
+        'Thumb_Proximal.R' : '親指０.R',
+        'Thumb_Intermediate.R' : '親指１.R',
+        'Thumb_Distal.R' : '親指２.R',
+        'Index_Proximal.R' : '人指１.R',
+        'Index_Intermediate.R' : '人指２.R',
+        'Index_Distal.R' : '人指３.R',
+        'Middle_Proximal.R' : '中指１.R',
+        'Middle_Intermediate.R' : '中指２.R',
+        'Middle_Distal.R' : '中指３.R',
+        'Ring_Proximal.R' : '薬指１.R',
+        'Ring_Intermediate.R' : '薬指２.R',
+        'Ring_Distal.R' : '薬指３.R',
+        'Little_Proximal.R' : '小指１.R',
+        'Little_Intermediate.R' : '小指２.R',
+        'Little_Distal.R' : '小指３.R',
+        'Upper_Leg.L': '足.L',
+        'Lower_Leg.L': 'ひざ.L',
+        'Foot.L': '足首.L',
+        'Toes.L': 'つま先.L',
+        'Upper_Leg.R': '足.R',
+        'Lower_Leg.R': 'ひざ.R',
+        'Foot.R': '足首.R',
+        'Toes.R': 'つま先.R'
+    }
+    for bone in bpy.context.active_object.data.bones:
+        if bone.name in dic:
+            bone.name = dic[bone.name]
 rename_bones()
