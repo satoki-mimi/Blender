@@ -24,3 +24,5 @@
     - 普段は、VRoidモデル（VRM） -> UnityのHumanoid -> MMDモデル（PMX）の順にリネームしている。
 - render_images_foreach_shape_key
   - シェイプキーごとに画像をレンダリングする。表情の一覧を得るために作成した。
+- symmetrize_vertices
+  - メッシュが左右対称となるように頂点の座標を修正する。
