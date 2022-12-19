@@ -2,7 +2,7 @@ import bpy
 
 def rename_bones():
     dic = {
-        'Root': 'Root' #基本のボーンにはない
+        'Root': 'Root', #基本のボーンにはない
         'J_Bip_C_Hips': 'Hips',
         'J_Bip_C_Spine': 'Spine',
         'J_Bip_C_Chest': 'Chest',
