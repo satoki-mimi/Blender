@@ -12,6 +12,8 @@
   - VRChatとVRMで利用する空のshape keyを作成する。
 - assign_weight_to_overlapping_vertices
   - ボーンのTailと同じ座標にある頂点に、ボーンのウェイトを割り当てる
+- equalize_edges_length
+  - エッジの長さを揃える
 - make_vrchat_shape_keys_from_aiueo
   - 「あいうえお」のshape keyをミックスして、VRChatで利用するshape keyを作成する。
 - overlay_bones
